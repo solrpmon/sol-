@@ -1,4 +1,4 @@
-discord.py==3.8.
+discord.py==3.9.0
 datetime.py
 asyncio.py
 random.py
