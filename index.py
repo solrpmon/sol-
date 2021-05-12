@@ -1,7 +1,7 @@
 import discord, datetime, asyncio, random
+impdrt os
 
 from discord import channel #모듈 불러오기
-token = "ODQxNTUwNjIzMjc5NTQ2Mzg5.YJoZFw.JwX_kjNtNaAWAxbdP1Rro2UALUI" #봇 토큰 설정하기
 
 client = discord.Client() #client 설정하기
 
@@ -127,5 +127,6 @@ async def on_message(message): #메세지 입력햇을때
         await message.channel.purge(limit=number)
         await message.channel.send(f"{number}개의 메세지를 삭제했습니다")
 #==============================================================================================================================
-    
-client.run(token)
+
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
